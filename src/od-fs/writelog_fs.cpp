@@ -9,9 +9,9 @@
 #include "custom.h"
 #include "debug.h"
 
-#include <sys/timeb.h>
+//#include <sys/timeb.h>
 #include <stdio.h>
-
+//#include <stdlib.h>
 #include "fsemu-mutex.h"
 
 int log_scsi = 0;
@@ -600,13 +600,13 @@ void console_flush (void)
 #endif
 }
 
-TCHAR *write_log_get_ts(void)
+/*TCHAR *write_log_get_ts(void)
 {
 	struct tm *t;
 #ifdef _WIN32
 	struct timeb tb;
 #else
-	struct _timeb tb;
+	//struct _timeb tb;
 #endif
 	static TCHAR out[100];
 	TCHAR *p;
@@ -621,7 +621,7 @@ TCHAR *write_log_get_ts(void)
 		return NULL;
 	if (!vsync_counter)
 		return NULL;
-	ftime (&tb);
+	time (&tb);
 	t = localtime (&tb.time);
 	strftime (curts, sizeof curts / sizeof (TCHAR), _T("%Y-%m-%d %H:%M:%S\n"), t);
 	p = out;
@@ -644,7 +644,7 @@ TCHAR *write_log_get_ts(void)
 		_stprintf (p, _T(" [%lu %03d%s%03d]"), vsync_counter, current_hpos_safe (), lof_store ? _T("-") : _T("="), vpos);
 	_tcscat (p, _T(": "));
 	return out;
-}
+}*/
 
 void write_logx(const char *format, ...)
 {
@@ -701,7 +701,7 @@ void write_log (const TCHAR *format, ...)
 
     char *buffer2 = NULL;
 #if 0
-    TCHAR *ts = write_log_get_ts();
+    TCHAR *ts = NULL;// write_log_get_ts();
     // printf("%s\n", ts ? ts : "");
     if (ts) {
         buffer2 = g_strdup_printf("%s%s", ts, buffer);
