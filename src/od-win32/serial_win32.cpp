@@ -484,7 +484,7 @@ static void serdatcopy(void)
 	data_in_sershift = 1;
 	data_in_serdat = 0;
 
-	if (seriallog > 0 || (consoleopen && seriallog < 0)) {
+	/*if (seriallog > 0 || (consoleopen && seriallog < 0)) {
 		gotlogwrite = true;
 		if (seriallog_lf && seriallog > 1) {
 			TCHAR *ts = write_log_get_ts();
@@ -496,7 +496,7 @@ static void serdatcopy(void)
 		write_logx(_T("%c"), ch);
 		if (ch == 10)
 			seriallog_lf = true;
-	}
+	}*/
 
 	if (serper == 372) {
 		if (enforcermode & 2) {
