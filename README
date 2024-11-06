@@ -2,14 +2,14 @@
 
 This is a special branch, modified for building and running on Termuz-app (non-rooted)
 
-Nothing fancy, just de-activated some problematic functions/includes.
+Nothing fancy, just boldly de-activated some problematic functions/includes.
 
 The tmx branch of FS-UAE is far from bugfree yet usable.
 
 I will try to fix the most annoying bugs so it will take some time to
 get FS-UAE ready for Termux-packaging.
 
-So please be patient and read the original introduction below by Frode.
+So please be patient and read the original introduction below by Frode Solheim.
 
 # FS-UAE README
 
