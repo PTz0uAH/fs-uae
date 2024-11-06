@@ -7,6 +7,7 @@
  *  This file written by Ryan C. Gordon.
  */
 
+
 #include "manymouse.h"
 /* Try to use this on everything but Windows and Mac OS by default... */
 #ifndef SUPPORT_XINPUT2
@@ -23,10 +24,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <linux/string.h>
 #include <dlfcn.h>
 #include <X11/extensions/XInput2.h>
-
+#include <sys/select.h>
+#include <linux/errno.h>
+#include <linux/time.h>
+#include <linux/types.h>
+#include <linux/unistd.h>
 // ----------------------------------------------------------------------------
 
 #define MouseStruct x11_xinput2_MouseStruct
