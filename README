@@ -4,7 +4,7 @@ This is a special branch, modified for building and running on Android via Termu
 
 Nothing fancy, just boldly de-activated some problematic functions/includes.
 
-The tmx branch of FS-UAE is far from bugfree yet usable.
+The tmx branch of FS-UAE is far from bugfree yet very usable even in current unfinished state.
 
 I will try to fix the most annoying bugs so it will take some time to
 get FS-UAE ready for Termux-packaging.
