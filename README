@@ -1,6 +1,6 @@
 # FS-UAE "Termuxified"
 
-This is a special branch, modified for building and running on Android via Termux-app (non-rooted)
+This is a special branch, modified for building and running on Android via Termux-app/x11 (non-rooted)
 
 Nothing fancy, just boldly de-activated some problematic functions/includes.
 
